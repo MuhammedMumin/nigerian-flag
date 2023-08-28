@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Flag Project</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #c7bfc0;
+      font-family: 'Arial', sans-serif;
+      overflow: hidden; /* Prevents scrollbars due to animation */
+    }
+
+    .flag {
+      width: 700px; /* Reduced width */
+      height: 400px; /* Reduced height */
+      position: relative;
+      display: flex;
+      animation: wave 5s infinite alternate; /* Waving animation */
+    }
+
+    .flag > div {
+      background-color: #008751;
+      height: 100%;
+      width: 33.33%;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .flag .center {
+      background-color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .flag > div > div {
+      background-color: white;
+      position: absolute;
+      height: 160px;
+      width: 160px;
+      border-radius: 50%;
+      top: 120px; /* Adjusted position */
+      left: calc(33.33% - 80px); /* Adjusted position */
+    }
+
+    .flag .center img {
+      max-width: 80%; /* Adjusted image size */
+      max-height: 80%; /* Adjusted image size */
+    }
+
+    /* Waving animation keyframes */
+    @keyframes wave {
+      0% {
+        transform: translateX(0);
+
+      }
+      100% {
+        transform: translateX(100px);
+
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="flag">
+    <div>
+      <!-- <p>peace</p> -->
+    </div>
+    <div class="center">
+      <!-- <p>love</p> Centered "love" text -->
+      <img src="coat of arm.jpg" alt="">
+    </div>
+    <div>
+      <!-- <p>progress</p> -->
+    </div>
+  </div>
+</body>
+
+</html>
